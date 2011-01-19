@@ -8,156 +8,15 @@
     <link rel="stylesheet" href="resources/yui/3.3.0/cssreset/reset-min.css" type="text/css">
     <link rel="stylesheet" href="resources/yui/3.3.0/cssfonts/fonts-min.css" type="text/css">
     <link rel="stylesheet" href="resources/yui/3.3.0/cssgrids/grids-min.css" type="text/css">
-
+ 	<link rel="stylesheet" href="resources/css/global.css" type="text/css">
 <style>
-/* everything below is custom styling to demonstrate how to create a page layout using yui grid units */
-
-/* Fixed, Centered Layout */
-
-#doc {
-    margin:auto; /* center in viewport */
-    width: 970px; /* fix page width */
-    background:#efefef;
-}
-
-#main .content {
-    margin-right: 10px; /* gutter between center and right columns */
-}
-
-.thumb-captions .yui3-u-1-3 {
-    vertical-align: bottom;
-}
-
-#main .yui3-u-1-2,
-#more .yui3-u-1-4 {
-    vertical-align: middle;
-}
-
-.advertisement .yui3-g,
-#more {
-    text-align: center; /* horizontally center content */
-}
-
-#more ul {
-    text-align: left; /* reset for content */
-}
-
-.advertisement .align-stub { /* empty stub used to fix the parent height and vertically align */
-    height: 200px;
-}
-
-.advertisement .yui3-u-1-2,
-.advertisement .align-stub {
-    vertical-align: middle; /* vertically center content */
-}
-
-/* content presentation (completely arbitrary, remove or customize) */
-
-#hd, .content, #more {
-    border: 1px solid #000;
-}
-
-#hd h1 {
-    font: bold 180% arial;
-    padding: 1em;
-}
-
-.content {
-    border-top: 0;
-}
-
-.content p, .content li, #nav li a {
-    padding: 0.5em 1em;
-}
-
-#nav li a, #extra li a, #more li a {
-    display: block;
-    padding: 0.25em 0;
-}
-
-#nav li a {
-    border: 1px dashed black;
-    padding: 0.5em 1em;
-}
-
-#nav .content {
-    border-right: 0;
-}
-
-#main .thumb-captions {
-    text-align: center;
-}
-
-#main .thumb-captions a {
-    background: #ddd;
-    border: 1px solid #000;
-    display: block;
-    padding: 5px;
-    margin: 0 5px;
-}
-
-#main .thumb-captions img {
-    border: 1px solid #000;
-    margin: 0.5em auto;
-    display: block;
-}
-
-
-#top-stories {
-    background: #dcdcdc;
-    border-bottom: 1px solid #000;
-    margin-bottom: 1em;
-}
-
-#top-stories ol {
-    background: #dcdcdc;
-    margin: 0 0 0 3.5em;
-}
-
-#top-stories li {
-    list-style-type: decimal;
-}
-
-#top-stories li a {
-    margin-left: -1em; /* collapse some space between list marker and content */
-}
-
-#extra .advertisement {
-    background: #666;
-    color: #fff;
-}
-
-#more {
-    background: #ccc;
-    margin-top: 1em;
-}
-
-#more ul {
-    padding: 0.5em 0;
-}
-
-#more li {
-    list-style-type: disc;
-    margin: 0 0 0 2.5em;
-}
-
-#more li a {
-    font:83% tahoma;
-}
-
-#ft {
-    background: #999;
-    font:80% verdana;
-    padding: 1em;
-    text-align: center;
-}
-
 </style>
 
 </head>
 <body id="doc">
     <div id="hd">
-        <h1>Page Layout Example</h1>
+        <img alt="Foravila den Joan" src="resources/images/foravila-banner.jpg">
+        <h1>Bienvenido a la Foravila de´n Joan</h1>
     </div>
 
     <div class="yui3-g">
