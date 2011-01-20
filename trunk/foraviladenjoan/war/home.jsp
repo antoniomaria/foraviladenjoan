@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
@@ -16,22 +16,19 @@
 <body id="doc">
     <div id="hd">
         <img alt="Foravila den Joan" src="resources/images/foravila-banner.jpg">
-        <h1>Bienvenido a la Foravila de�n Joan</h1>
+        <h1>Bienvenido a la Foravila de´n Joan</h1>
     </div>
 	<div id="main">
 		<h2>Verduras</h2>
-		<table border="0" width="100%">
+		<table border="0" width="100%" class="vegetables">
 			<tr>
 				<td>
-					<div class="thumb">
-						<img alt="" src="resources/images/notavailable.jpg">
-					</div>
-					<span>Ajos</span>
+					<img alt="" src="resources/images/notavailable.jpg">
+					<span class="title">Ajos</span><br>
+					<span class="price">4.95 €/kg</span>
 				</td>
 				<td>
-					<div class="thumb">
-						<img alt="" src="resources/images/notavailable.jpg">
-					</div>
+					<img alt="" src="resources/images/notavailable.jpg" style="border: 1px solid #000">
 					<span>Alcachofas</span>
 				</td>
 				<td>Berenjena morada</td>
