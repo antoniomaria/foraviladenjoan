@@ -54,4 +54,50 @@ public class ProductsService {
 		vegetables.add(product);
 		return vegetables;
 	}
+	
+	public List <Product> findFruits(){
+		List <Product> fruits = new ArrayList<Product>();
+		Product product = null;
+		
+		product = new Product("Albaricoque");
+		fruits.add(product);
+		
+		product = new Product("Granadas");
+		fruits.add(product);
+		
+		product = new Product("Melón");
+		product.setImagePath("melon.jpg");
+		fruits.add(product);
+		
+		product = new Product("Sandía");
+		fruits.add(product);
+		
+		return fruits;
+	}
+	
+	public List <Product> findMiscellaneous(){
+		List <Product> miscellaneous = new ArrayList<Product>();
+		Product product = null;
+		
+		product = new Product("Almendras con cascara");
+		miscellaneous.add(product);
+		
+		product = new Product("Habas");
+		miscellaneous.add(product);
+		
+		product = new Product("Judia chilena");
+		miscellaneous.add(product);
+		
+		product = new Product("Gallina");
+		miscellaneous.add(product);
+		
+		product = new Product("Huevos");
+		product.setImagePath("egg.jpg");
+		miscellaneous.add(product);
+		
+		product = new Product("Pollo");
+		miscellaneous.add(product);
+		
+		return miscellaneous;
+	}
 }
