@@ -6,7 +6,8 @@
 #doc {
     margin:auto; /* center in viewport */
     width: 950px; /* fix page width */
-    background:#efefef; 
+    background:#efefef;
+    font-family: tahoma;
 }
 
 #main .content {
@@ -49,6 +50,19 @@
 #hd h1 {
     font: bold 120% Tahoma;
     padding: 0.5em;
+    color: #b32424;
+}
+
+#hd hr{
+	height:5px;
+    background:#ff7f29;
+}
+
+#main h2 {
+	font-size: 116%;
+	font-weight: bold;
+    padding: 0.5em;
+    color: #016734;
 }
 
 .content {
@@ -146,6 +160,16 @@ td{
 	text-align: center;
 	padding: 5px;
 }
-.thumb{
+
+.vegetables img{
 	border: 1px solid #000;
+}
+
+.vegetables .title{
+	color: #797979;
+	font-size: 93%;
+	font-weight: bold;
+}
+.vegetables .price{
+	font-size: 85%;
 }
