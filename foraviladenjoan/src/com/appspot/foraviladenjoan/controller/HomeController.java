@@ -13,6 +13,8 @@ import com.appspot.foraviladenjoan.mvc.Item;
 import com.appspot.foraviladenjoan.mvc.ItemCollection;
 import com.appspot.foraviladenjoan.mvc.ModelAndView;
 import com.appspot.foraviladenjoan.service.ProductsService;
+import com.appspot.foraviladenjoan.util.ConvertUtil;
+
 import java.util.logging.Logger;
 
 public class HomeController extends BaseController {
@@ -33,25 +35,9 @@ public class HomeController extends BaseController {
 		ProductsService service = new ProductsService();
 
 		List<Product> vegetables = service.findVegetables();
-		ItemCollection table = new ItemCollection();
+		model.put("vegetables", ConvertUtil.toTable(vegetables));
 		
-		ItemCollection row = null;
-		int i = 0;
-		for (Product product : vegetables) {
-			if (i % 5 == 0){
-				row = new ItemCollection();
-				table.add(row);
-			}
-			Item pItem = new Item();
-			pItem.put("name", product.getName());
-			pItem.put("cost", product.getCost());
-			pItem.put("unit", product.getUnit());
-			pItem.put("available", product.isAvailable());
-			pItem.put("imagePath", product.getImagePath());
-			row.add(pItem);
-			i++;
-		}
-		model.put("vegetables", table);
+		
 
 		return new ModelAndView(model, "/WEB-INF/views/home.jsp");
 	}

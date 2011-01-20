@@ -1,5 +1,7 @@
 package com.appspot.foraviladenjoan.busines;
 
+import com.appspot.foraviladenjoan.util.Constant;
+
 public class Product {
 	
 	private String name;
@@ -15,7 +17,7 @@ public class Product {
 	public Product(String name){
 		this.name = name;
 		this.available = false;
-		this.imagePath = "resources/images/image-not-available.jpg";
+		this.imagePath = Constant.IMAGES_BASE_PATH + "image-not-available.jpg";
 		this.unit = "€/Kg";
 	}
 	
@@ -66,7 +68,7 @@ public class Product {
 	}
 
 	public void setImagePath(String imagePath) {
-		this.imagePath = imagePath;
+		this.imagePath = Constant.IMAGES_BASE_PATH + imagePath;
 	}
 
 	@Override

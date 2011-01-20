@@ -52,7 +52,6 @@ public class ProductsService {
 		vegetables.add(product);
 		product = new Product("Tomate de ramallet");
 		vegetables.add(product);
-		
 		return vegetables;
 	}
 }
