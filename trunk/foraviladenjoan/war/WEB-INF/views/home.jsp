@@ -27,35 +27,48 @@
 				<tr>
 					<c:forEach var="product" items="${row}" varStatus="status">
 						<td>
-						<img alt="" src="${product['imagePath']}">
+						<img alt="" src="${product['imagePath']}"><br/>
+						<span class="title">${product['name']}</span><br/>
+						<span class="cost">${product['cost']} ${product['unit']}</span>
+						</td>
+					</c:forEach>				
+				</tr>
+			</c:forEach>
+		</table>
+		
+		<h2>Frutas</h2>
+		<table border="0" width="100%" class="vegetables">
+			<c:forEach var="row" items="${fruits}">
+				<tr>
+					<c:forEach var="product" items="${row}" varStatus="status">
+						<td>
+						<img alt="" src="${product['imagePath']}"><br/>
 						<span class="title">${product['name']}</span><br>
 						<span class="cost">${product['cost']} ${product['unit']}</span>
 						</td>
 					</c:forEach>				
 				</tr>
 			</c:forEach>
-			<%-- 
-			<tr>
-				<td>
-					<img alt="" src="resources/images/notavailable.jpg">
-					<span class="title">Ajos</span><br>
-					<span class="price">4.95 €/kg</span>
-				</td>
-				<td>
-					<img alt="" src="resources/images/notavailable.jpg" style="border: 1px solid #000">
-					<span>Alcachofas</span>
-				</td>
-				<td>Berenjena morada</td>
-				<td>Berenjenas blanca</td>
-				<td>Boniatos (batata)</td>
-				<td>Calabaza</td>
-			</tr>
-			--%>
+		</table>
+		
+		<h2>Varios</h2>
+		<table border="0" width="100%" class="vegetables">
+			<c:forEach var="row" items="${miscellaneus}">
+				<tr>
+					<c:forEach var="product" items="${row}" varStatus="status">
+						<td>
+						<img alt="" src="${product['imagePath']}"><br/>
+						<span class="title">${product['name']}</span><br/>
+						<span class="cost">${product['cost']} ${product['unit']}</span>
+						</td>
+					</c:forEach>				
+				</tr>
+			</c:forEach>
 		</table>
 	</div>
 
     <div id="ft">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed arcu arcu, volutpat vel volutpat vel, varius ac odio.</p>
+        <p>Para pedidos contactar con Joan Rosello - Telefono 699 886 731</p>
     </div>
 </body>
 </html>
