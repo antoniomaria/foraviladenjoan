@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -17,10 +18,23 @@
     <div id="hd">
         <img alt="Foravila den Joan" src="resources/images/foravila-banner.jpg">
         <h1>Bienvenido a la Foravila de´n Joan</h1>
+        <hr/>
     </div>
 	<div id="main">
 		<h2>Verduras</h2>
 		<table border="0" width="100%" class="vegetables">
+			<c:forEach var="row" items="${vegetables}">
+				<tr>
+					<c:forEach var="product" items="${row}" varStatus="status">
+						<td>
+						<img alt="" src="${product['imagePath']}">
+						<span class="title">${product['name']}</span><br>
+						<span class="cost">${product['cost']} ${product['unit']}</span>
+						</td>
+					</c:forEach>				
+				</tr>
+			</c:forEach>
+			<%-- 
 			<tr>
 				<td>
 					<img alt="" src="resources/images/notavailable.jpg">
@@ -36,6 +50,7 @@
 				<td>Boniatos (batata)</td>
 				<td>Calabaza</td>
 			</tr>
+			--%>
 		</table>
 	</div>
 
