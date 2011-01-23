@@ -22,7 +22,7 @@ public class ProductsService {
 		vegetables.add(product);
 		product = new Product("Berenjenas blanca");
 		vegetables.add(product);
-		product = new Product("Boniatos - Batata)");
+		product = new Product("Boniatos - Batata");
 		product.setImagePath("sweet-potato.jpg");
 		vegetables.add(product);
 		
@@ -85,7 +85,7 @@ public class ProductsService {
 		product = new Product("Habas");
 		miscellaneous.add(product);
 		
-		product = new Product("Judia chilena");
+		product = new Product("Judia cilena");
 		miscellaneous.add(product);
 		
 		product = new Product("Gallina");
