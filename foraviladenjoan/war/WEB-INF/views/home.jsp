@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Foravila den Joan - Agricultura ecologica en Palma Mallorca</title>
+    <title>Foravila den Joan - Agricultura ecológica en Palma Mallorca</title>
     <link rel="stylesheet" href="resources/yui/3.3.0/cssreset/reset-min.css" type="text/css">
     <link rel="stylesheet" href="resources/yui/3.3.0/cssfonts/fonts-min.css" type="text/css">
     <link rel="stylesheet" href="resources/yui/3.3.0/cssgrids/grids-min.css" type="text/css">
@@ -68,7 +68,7 @@
 	</div>
 
     <div id="ft">
-        <p>Para pedidos contactar con Joan Rosello - Telefono 699 886 731</p>
+        <p>Para pedidos contactar con Joan Roselló - Teléfono 699 886 731 - Email joanrossellom@gmail.com</p>
     </div>
 </body>
 </html>
