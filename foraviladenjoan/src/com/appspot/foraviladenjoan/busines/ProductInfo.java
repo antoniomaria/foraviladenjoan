@@ -2,7 +2,7 @@ package com.appspot.foraviladenjoan.busines;
 
 import com.appspot.foraviladenjoan.util.Constant;
 
-public class Product {
+public class ProductInfo {
 	
 	private String name;
 	
@@ -14,14 +14,14 @@ public class Product {
 	
 	private String imagePath;
 	
-	public Product(String name){
+	public ProductInfo(String name){
 		this.name = name;
 		this.available = false;
 		this.imagePath = Constant.IMAGES_BASE_PATH + "image-not-available.jpg";
 		this.unit = "€/Kg";
 	}
 	
-	public Product (String name, double cost, String unit,
+	public ProductInfo (String name, double cost, String unit,
 			boolean available, String imagePath) {
 		super();
 		this.name = name;
