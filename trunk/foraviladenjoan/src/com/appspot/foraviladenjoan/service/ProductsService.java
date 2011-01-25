@@ -3,99 +3,99 @@ package com.appspot.foraviladenjoan.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.appspot.foraviladenjoan.busines.Product;
+import com.appspot.foraviladenjoan.busines.ProductInfo;
 
 public class ProductsService {
 
-	public List <Product> findVegetables(){
-		List <Product> vegetables = new ArrayList<Product>();
-		Product product = null;
+	public List <ProductInfo> findVegetables(){
+		List <ProductInfo> vegetables = new ArrayList<ProductInfo>();
+		ProductInfo product = null;
 		
-		product = new Product("Ajos");
+		product = new ProductInfo("Ajos");
 		vegetables.add(product);
 		
-		product = new Product("Alcachofas");
+		product = new ProductInfo("Alcachofas");
 		product.setImagePath("artichoke.jpg");
 		vegetables.add(product);
 		
-		product = new Product("Berenjena morada");
+		product = new ProductInfo("Berenjena morada");
 		vegetables.add(product);
-		product = new Product("Berenjenas blanca");
+		product = new ProductInfo("Berenjenas blanca");
 		vegetables.add(product);
-		product = new Product("Boniatos - Batata");
+		product = new ProductInfo("Boniatos - Batata");
 		product.setImagePath("sweet-potato.jpg");
 		vegetables.add(product);
 		
-		product = new Product("Calabaza");
+		product = new ProductInfo("Calabaza");
 		product.setImagePath("pumpking.jpg");
 		vegetables.add(product);
 		
-		product = new Product("Cebollas");
+		product = new ProductInfo("Cebollas");
 		product.setImagePath("onion.jpg");
 		vegetables.add(product);
 		
-		product = new Product("Coles");
+		product = new ProductInfo("Coles");
 		product.setImagePath("kale.jpg");
 		vegetables.add(product);
 		
-		product = new Product("Patata");
+		product = new ProductInfo("Patata");
 		product.setImagePath("potato.jpg");
 		vegetables.add(product);
 		
-		product = new Product("Pimiento rojo");
+		product = new ProductInfo("Pimiento rojo");
 		vegetables.add(product);
-		product = new Product("Pimiento rubio");
+		product = new ProductInfo("Pimiento rubio");
 		vegetables.add(product);
-		product = new Product("Sofrito - Ajos Tiernos");
+		product = new ProductInfo("Sofrito - Ajos Tiernos");
 		vegetables.add(product);
-		product = new Product("Tomate de pera");
+		product = new ProductInfo("Tomate de pera");
 		vegetables.add(product);
-		product = new Product("Tomate de ramallet");
+		product = new ProductInfo("Tomate de ramallet");
 		vegetables.add(product);
 		return vegetables;
 	}
 	
-	public List <Product> findFruits(){
-		List <Product> fruits = new ArrayList<Product>();
-		Product product = null;
+	public List <ProductInfo> findFruits(){
+		List <ProductInfo> fruits = new ArrayList<ProductInfo>();
+		ProductInfo product = null;
 		
-		product = new Product("Albaricoque");
+		product = new ProductInfo("Albaricoque");
 		fruits.add(product);
 		
-		product = new Product("Granadas");
+		product = new ProductInfo("Granadas");
 		fruits.add(product);
 		
-		product = new Product("Melón");
+		product = new ProductInfo("Melón");
 		product.setImagePath("melon.jpg");
 		fruits.add(product);
 		
-		product = new Product("Sandía");
+		product = new ProductInfo("Sandía");
 		fruits.add(product);
 		
 		return fruits;
 	}
 	
-	public List <Product> findMiscellaneous(){
-		List <Product> miscellaneous = new ArrayList<Product>();
-		Product product = null;
+	public List <ProductInfo> findMiscellaneous(){
+		List <ProductInfo> miscellaneous = new ArrayList<ProductInfo>();
+		ProductInfo product = null;
 		
-		product = new Product("Almendras con cascara");
+		product = new ProductInfo("Almendras con cascara");
 		miscellaneous.add(product);
 		
-		product = new Product("Habas");
+		product = new ProductInfo("Habas");
 		miscellaneous.add(product);
 		
-		product = new Product("Judia cilena");
+		product = new ProductInfo("Judia cilena");
 		miscellaneous.add(product);
 		
-		product = new Product("Gallina");
+		product = new ProductInfo("Gallina");
 		miscellaneous.add(product);
 		
-		product = new Product("Huevos");
+		product = new ProductInfo("Huevos");
 		product.setImagePath("egg.jpg");
 		miscellaneous.add(product);
 		
-		product = new Product("Pollo");
+		product = new ProductInfo("Pollo");
 		miscellaneous.add(product);
 		
 		return miscellaneous;
