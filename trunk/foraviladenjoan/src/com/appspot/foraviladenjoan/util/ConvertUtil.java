@@ -3,6 +3,7 @@ package com.appspot.foraviladenjoan.util;
 import java.util.List;
 
 import com.appspot.foraviladenjoan.busines.ProductInfo;
+import com.appspot.foraviladenjoan.mvc.IItem;
 import com.appspot.foraviladenjoan.mvc.Item;
 import com.appspot.foraviladenjoan.mvc.ItemCollection;
 
@@ -26,6 +27,14 @@ public class ConvertUtil {
 			pItem.put("imagePath", product.getImagePath());
 			row.add(pItem);
 			i++;
+		}
+		
+		for (IItem irow : table) {
+			ItemCollection xrow = (ItemCollection) (irow);
+			for (int j = xrow.size() ; j <= 4; j ++){
+				xrow.add(new Item());
+			}
+			
 		}
 		return table;
 	}
