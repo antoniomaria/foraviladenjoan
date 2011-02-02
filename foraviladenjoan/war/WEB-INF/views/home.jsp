@@ -16,10 +16,11 @@
 </head>
 <body id="doc">
     <div id="hd">
-        <img alt="Foravila den Joan" src="resources/images/foravila-banner.jpg">
+        <img alt="Foravila den Joan" src="resources/images/banner.jpg">
         <h1>Bienvenido a la Foravila de´n Joan</h1>
         <hr/>
     </div>
+    <p>Los productos disponibles para esta temporada son los siguientes:</p>
 	<div id="main">
 		<h2>Verduras</h2>
 		<table border="0" width="100%" class="vegetables">
@@ -27,9 +28,20 @@
 				<tr>
 					<c:forEach var="product" items="${row}" varStatus="status">
 						<td>
+						<c:if test="${product['name'] != null}">
 						<img alt="" src="${product['imagePath']}"><br/>
 						<span class="title">${product['name']}</span><br/>
-						<span class="cost">${product['cost']} ${product['unit']}</span>
+						<span class="cost">
+						<c:choose>
+							<c:when test="${product['cost'] == 0}">
+								Precio no disponible
+							</c:when>
+							<c:otherwise>
+								${product['cost']} ${product['unit']}
+							</c:otherwise>
+						</c:choose>
+						</span>
+						</c:if>
 						</td>
 					</c:forEach>				
 				</tr>
@@ -42,9 +54,20 @@
 				<tr>
 					<c:forEach var="product" items="${row}" varStatus="status">
 						<td>
+						<c:if test="${product['name'] != null}">
 						<img alt="" src="${product['imagePath']}"><br/>
-						<span class="title">${product['name']}</span><br>
-						<span class="cost">${product['cost']} ${product['unit']}</span>
+						<span class="title">${product['name']}</span><br/>
+						<span class="cost">
+						<c:choose>
+							<c:when test="${product['cost'] == 0}">
+								Precio no disponible
+							</c:when>
+							<c:otherwise>
+								${product['cost']} ${product['unit']}
+							</c:otherwise>
+						</c:choose>
+						</span>
+						</c:if>
 						</td>
 					</c:forEach>				
 				</tr>
@@ -57,9 +80,20 @@
 				<tr>
 					<c:forEach var="product" items="${row}" varStatus="status">
 						<td>
+						<c:if test="${product['name'] != null}">
 						<img alt="" src="${product['imagePath']}"><br/>
 						<span class="title">${product['name']}</span><br/>
-						<span class="cost">${product['cost']} ${product['unit']}</span>
+						<span class="cost">
+						<c:choose>
+							<c:when test="${product['cost'] == 0}">
+								Precio no disponible
+							</c:when>
+							<c:otherwise>
+								${product['cost']} ${product['unit']}
+							</c:otherwise>
+						</c:choose>
+						</span>
+						</c:if>
 						</td>
 					</c:forEach>				
 				</tr>
@@ -68,7 +102,7 @@
 	</div>
 
     <div id="ft">
-        <p>Para pedidos contactar con Joan Roselló - Teléfono 699 886 731 - Email joanrossellom@gmail.com</p>
+        <p>Para pedidos contactar con Joan Roselló - Email joanrossellom@gmail.com</p>
     </div>
 </body>
 </html>
