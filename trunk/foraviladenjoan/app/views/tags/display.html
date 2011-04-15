@@ -1,0 +1,33 @@
+<h2>${_title}</h2>
+<table border="0" width="100%" class="vegetables">
+	#{list items:_products, as:'row'}
+		<tr>
+			#{list items:row, as:'product'}
+			<td>
+			   #{if product.name != null}
+                #{if product.imageName != null && product.imageName != ''}
+                   #{set 'imagePath'}
+                     public/images/${product.imageName}
+                   #{/set}
+                #{/if}
+		        #{else}
+		            #{set 'imagePath'}
+                     public/images/image-not-available.jpg
+                   #{/set}
+                #{/else}
+				<img alt="" src="#{get 'imagePath' /}"><br/>
+				<span class="title">${product.name}</span><br/>
+				<span class="cost">
+				 #{if product.cost == 0}
+				   Precio no disponible
+                 #{/if}
+		         #{else}
+				  ${product.cost}
+				 #{/else}
+				</span>
+				#{/if}
+			</td>
+			#{/list}
+		</tr>
+	#{/list}
+</table>

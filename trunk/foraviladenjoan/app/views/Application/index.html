@@ -1,0 +1,15 @@
+#{extends 'main.html' /}
+#{set title:'Foravila den Joan - Agricultura ecológica en Palma Mallorca' /}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/yui/3.3.0/cssreset/reset-min.css'}" type="text/css">
+<link rel="stylesheet" href="@{'/public/yui/3.3.0/cssfonts/fonts-min.css'}" type="text/css">
+<link rel="stylesheet" href="@{'/public/yui/3.3.0/cssgrids/grids-min.css'}" type="text/css">
+#{/set}
+
+<b>${now}</b>
+#{display title:'Vegetales', products:vegetables /}
+
+#{display title:'Frutas', products:fruits /}
+
+#{display title:'Varios', products:miscellaneous /}
