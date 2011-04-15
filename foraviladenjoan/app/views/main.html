@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>#{get 'title' /}</title>		
+    <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/main.css'}" />
+    <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}" />
+    #{get 'moreStyles' /}
+    #{get 'moreScripts' /}
+  </head>
+  <body id="doc">
+    <div id="hd">
+       <img alt="Foravila den Joan" src="@{'/public/images/banner.jpg'}">
+       <h1>Bienvenido a la Foravila de´n Joan</h1>
+       <hr/>
+    </div>
+    <div id="main">
+      <p>Los productos disponibles para esta temporada son los siguientes:</p>
+   	  #{doLayout /}
+   	</div>
+    <div id="ft">
+      <p>Para pedidos contactar con Joan Roselló - Email joanrossellom@gmail.com</p>
+    </div>
+  </body>
+</html>

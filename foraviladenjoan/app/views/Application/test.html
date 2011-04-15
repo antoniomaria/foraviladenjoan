@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="Description" content="Venta de hortalizas frutas verduras ecologicas Palma de Mallorca.">
+    <meta name="Keywords" content="agricultura campo foravila directo mesa organico ecologico palma mallorca ">
+    <title>#{get 'title' /}</title>		
+    <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}" />
+    #{get 'moreStyles' /}
+    #{get 'moreScripts' /}
+    
+   <link rel="stylesheet" href="@{'/public/yui/3.3.0/cssreset/reset-min.css'}" type="text/css">
+   <link rel="stylesheet" href="@{'/public/yui/3.3.0/cssfonts/fonts-min.css'}" type="text/css">
+   <link rel="stylesheet" href="@{'/public/yui/3.3.0/cssgrids/grids-min.css'}" type="text/css">
+   <style type="text/css">
+   .test{
+     font-family: 'Lucida Calligraphy', cursive;
+     /*
+     font-family: 'Lucida Casual', sans-serif;
+     */
+   }
+   #doc {
+    margin:15px auto; /* center in viewport */
+    width: 950px; /* fix page width */
+    color: #342029;
+   }
+   html{
+     background-image: url("@{'/public/images/toptiles.jpg'}");
+     background-repeat: repeat-x;
+     background-position: top left;
+   }
+   .right{
+     text-align: right;
+   }
+   h1{
+     font-family: 'Lucida Calligraphy', cursive;
+     font-weight: bold;
+     font-variant: small-caps;
+     font-size: 153.9%; /* 20 */
+     letter-spacing: 1px;
+     color: #342029;
+   }
+   h2{
+     font-family: 'Lucida Calligraphy', cursive;
+     font-weight: bold;
+     font-variant: small-caps;
+     font-size: 138.5%; /* 18 */
+     color: #342029;
+   }
+   hr{
+   height: 1px; border: 0px; margin-top: .1em; margin-bottom: .1em; background-color: #eee;
+   }
+   .picture{
+   border: 1px solid #342029;
+background-color: #342029;
+border-radius: 0px 10px 0px 10px;
+-moz-border-radius: 0px 10px 0px 10px;
+-webkit-border-top-right-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+   }
+   .vegetables .thumb{
+      border: 2px solid #342029;
+  background-color: #eee;
+border-radius: 0px 10px 0px 10px;
+-moz-border-radius: 0px 10px 0px 10px;
+-webkit-border-top-right-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+   }
+   .vegetables,table{
+      text-align: center;
+   }
+   .vegetables .prize{
+       color: #409701;
+       font-size: 123.1%;
+   }
+   .vegetables .title{
+       color: #ff7f29;
+       font-size: 116%;
+   }
+   .content{
+     padding: 5px;
+     border-right: 1px solid #eee;
+   }
+   strong{
+     color: #016734;
+     font-weight: bold;
+   }
+   ul{
+     margin-top:5px;
+margin-left:15px;
+   }
+   li{
+     list-style-image: url("@{'/public/images/list-marker.jpg'}");
+     padding-left: .6em;
+   }
+   </style>
+  </head>
+  <body id="doc">
+    <div id="hd">
+       <img alt="Foravila Logo" src="@{'/public/images/logo.jpg'}">
+       <h1>BIENVENIDO</h1>
+    </div>
+    <div id="main">
+    
+     <div class="yui3-g">
+     
+      <div class="yui3-u-2-3" id="left">
+      
+      <div class="yui3-g">
+        <div class="yui3-u-1-2">
+          <div class="content">
+           <img class="picture" alt="field" src="@{'/public/images/field.jpg'}">
+          </div>
+        </div>
+        <div class="yui3-u-1-2">
+          <div class="content">
+            <p>
+              <strong>La foravila de´n Joan</strong> es una casa de campo tradicional, a las afueras la ciudad de <strong>Palma de Mallorca</strong> donde se cultivan frutas, verduras, hortalizas en función de la estación del año.
+            </p>
+            <p>Mediante esta página podrás acceder a los productos de esta huerta directamente, <strong>sin intermediarios</strong>, garantizando productos siempre frescos. Al ser una finca pequeña, no vendemos al por mayor y no siempre tenemos lo que nos gustaría ofrecer.</p>
+            <br/>
+            <!-- 
+            <p>Utilizando esta página gana usted, que se garantiza productos frescos de la tierra, a un precio competitivo y el agricultor (Joan) que no necesita intermediarios.
+             -->
+            <p><strong>GRACIAS por visitarnos y esperemos que encuentre lo que busca</strong></p>
+            <br/>
+          </div>
+        </div>
+      </div>
+      <hr/>
+       <div class="content">
+      <h2>Novedades para el mes de Mayo</h2>
+<br/>
+<table border="0" width="100%" class="vegetables">
+	#{list items:products, as:'row'}
+		<tr>
+			#{list items:row, as:'product'}
+			<td>
+			   #{if product.name != null}
+                #{if product.imageName != null && product.imageName != ''}
+                   #{set 'imagePath'}
+                     public/images/${product.imageName}
+                   #{/set}
+                #{/if}
+		        #{else}
+		            #{set 'imagePath'}
+                     public/images/image-not-available.jpg
+                   #{/set}
+                #{/else}
+				<img alt="" class="thumb" src="#{get 'imagePath' /}" width="100px"><br/>
+				<span class="title">${product.name}</span><br/>
+				<span class="prize">
+				 #{if product.cost == 0}
+				   Precio no disponible
+                 #{/if}
+		         #{else}
+				  ${product.cost}
+				 #{/else}
+				</span>
+				#{/if}
+			</td>
+			#{/list}
+		</tr>
+	#{/list}
+</table>      
+   	</div>
+   	
+   	</div> <!-- end left -->
+   	<div class="yui3-u-1-3" id="right">
+   	<div class="content">
+   	<h2>Listado de productos</h2>
+   	<ul>
+   	  <li>Tomates</li>
+   	  <li>Cebollas</li>
+   	  <li>Coles</li>
+   	</ul>
+   	</div>
+   	</div> <!-- end right -->
+   	
+   	
+   	 </div>
+   	 </div> <!-- end main -->
+   	
+    <div id="ft">
+      <p>Para pedidos contactar con Joan Roselló - Email joanrossellom@gmail.com</p>
+    </div>
+  </body>
+</html>
