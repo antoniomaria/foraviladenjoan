@@ -40,5 +40,8 @@ public class Application extends Controller {
     	ItemCollection products= ConvertUtil.toTable(productsList);
     	render(products);
     }
+    public  static void newPage(){
+    	render();
+    }
 
 }
